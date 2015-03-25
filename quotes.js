@@ -3,14 +3,6 @@
 //CMP237
 
 
-function removeQuotes(string){
-
-
-
-	return string.replace(/'([^']*)'/);
-
-}
-
 
 var text = "'I'm the cook,' he said, 'it's my job.'";
 // Change this call.
@@ -18,4 +10,5 @@ var text = "'I'm the cook,' he said, 'it's my job.'";
 // // -> "I'm the cook," he said, "it's my job."
 
 
-console.log(text.replace(/'/g, '"'));
+
+console.log(text.replace(/(^|\W)'|'(\W|$)/g, '"'));
